@@ -1,0 +1,5 @@
+Number of Sales = 
+-- SUM(factInternetSales[Sales Amount])
+-- COUNT(factInternetSales[SalesOrderNumber])
+-- MIN(factInternetSales[Sales Amount])
+-- MAX(factInternetSales[OrderDate])
