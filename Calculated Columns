@@ -1,6 +1,13 @@
-Total Sales Amount FILTER = 
+Total Sales Amount FILTER =                        
 CALCULATE(
     [Total Sales Amount],
     FILTER(dimProduct, dimProduct[Color] = "Blue")
- )
+)
+
+VS
+
+Total Sales Amount KEEPFILTER = 
+CALCULATE(
+    [Total Sales Amount],
+    KEEPFILTER(dimProduct[Color] = "Blue") 
 
