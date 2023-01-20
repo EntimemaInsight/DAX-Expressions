@@ -1,0 +1,2 @@
+Iterator SUMX = 
+SUMX(factInternetSales, factInternetSales[Sales Amount EUR]*2)
