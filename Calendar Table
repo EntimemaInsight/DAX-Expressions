@@ -4,4 +4,4 @@ ADDCOLUMNS(
     "Year", Year([Date]),
     "Month", MONTH([Date]),
     "Month Name", FORMAT([Date], "MMM")
-)
+ )
