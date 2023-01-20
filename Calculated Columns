@@ -2,5 +2,5 @@ Total Sales Amount FILTER =
 CALCULATE(
     [Total Sales Amount],
     FILTER(dimProduct, dimProduct[Color] = "Blue")
-)
+ )
 
