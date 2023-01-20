@@ -1,0 +1,5 @@
+Total Sales Amount CALCULATE = 
+CALCULATE(
+    [Total Sales Amount],
+    dimProduct[Color] = "Blue"
+)
