@@ -1,0 +1,3 @@
+CustomerName = CONCATENATE(dimCustomer[FirstName], dimCustomer[LastName])
+
+CustomerName = dimCustomer[FirstName]& " "& dimCustomer[LastName]
