@@ -1,2 +1,7 @@
 Iterator SUMX = 
 SUMX(factInternetSales, factInternetSales[Sales Amount EUR]*2)
+
+
+Iterator SUMX = SUMX(
+FILTER(factInternetSales, RELATED(dimCustomer[Age Buckets]) = "50 Plus"), factInternetSales[Sales Amount EUR]
+)
