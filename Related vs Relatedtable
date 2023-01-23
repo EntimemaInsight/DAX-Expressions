@@ -1,0 +1,3 @@
+# Equivalent to Vlookup in Excel
+Age Buckets Related = 
+RELATED(dimCustomer[Age Buckets])
