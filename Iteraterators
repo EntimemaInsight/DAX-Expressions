@@ -2,6 +2,11 @@ Iterator SUMX =
 SUMX(factInternetSales, factInternetSales[Sales Amount EUR]*2)
 
 
+# Keep only "50 Pluse"
 Iterator SUMX = SUMX(
 FILTER(factInternetSales, RELATED(dimCustomer[Age Buckets]) = "50 Plus"), factInternetSales[Sales Amount EUR]
 )
+
+# Keep all buckets in "Age buckets"
+iterator Sumx = SUMX(
+    FILTER(factInternetSales, RELATED(dimCustomer[Age Buckets]) IN VALUES(dimCustomer[Age Buckets])), factInternetSales[Sales Amount EUR])
