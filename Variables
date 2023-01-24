@@ -1,0 +1,10 @@
+% Sales YoY Growth = 
+# First we calculate the Sales Amount for the current/latest year
+var SalesAmountCurrentYear = ([Total Sales Amount] - CALCULATE([Total Sales Amount], PARALLELPERIOD('Calendar Table'[Date],-12,MONTH)))
+
+# Then we calculate the Total Sales Amount for all begining of latest year   
+var SalesAmountAllTimeMinusCurrentYear =  CALCULATE([Total Sales Amount], PARALLELPERIOD('Calendar Table'[Date],-12,MONTH))
+
+return 
+
+DIVIDE([Sales Amount Current Year], SalesAmountAllTimeMinusCurrentYear)
