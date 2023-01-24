@@ -1,0 +1,2 @@
+Sales Amount Current Year = 
+[Total Sales Amount] - CALCULATE([Total Sales Amount], PARALLELPERIOD('Calendar Table'[Date],-12,MONTH))
