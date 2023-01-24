@@ -1,0 +1,2 @@
+Currency Table Filtered = IF(ISFILTERED(dimCurrency), SELECTEDVALUE(dimCurrency[CurrencyName]), "No Currency Seelcted")  
+
