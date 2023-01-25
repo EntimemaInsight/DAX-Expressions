@@ -1,3 +1,5 @@
+# Option 1
+
 Calendar Table = 
 ADDCOLUMNS(
     CALENDARAUTO(),
@@ -5,3 +7,16 @@ ADDCOLUMNS(
     "Month", MONTH([Date]),
     "Month Name", FORMAT([Date], "MMM")
  )
+ 
+ # Option 2
+DateTable = 
+ADDCOLUMNS (
+   CALENDAR (DATE(2018,1,1), DATE(2025,12,31)),
+   "Month", FORMAT ( [Date], "MMMM" ),
+   "Date_Whole", FORMAT ( [Date], "DD.MM.YYYY" ),
+   "Date_Month", FORMAT ( [Date], "mmmm.YYYY" ),
+   "Date & Year", FORMAT( [Date], "MM.YYYY" ),
+   "Monthnumber", FORMAT ( [Date], "MM" ))
+   
+   IsCurrentMonth = IF(MONTH([Date]) = MONTH(TODAY()) && YEAR([Date]) = YEAR(TODAY()), 1, 0)
+ 
