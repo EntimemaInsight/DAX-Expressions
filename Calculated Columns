@@ -25,6 +25,17 @@ CALCULATE(
 
 VS
 
+# ALWAYS BLUE Colour!!
+
+Total Sales Amount KEEPFILTER = 
+CALCULATE(
+    SUM(factInternetSales[Sales Amount EUR]),
+    dimProduct[Color] = "Blue"
+) 
+
+
+# ONLY BLUE Colour!!
+
 Total Sales Amount KEEPFILTER = 
 CALCULATE(
     SUM(factInternetSales[Sales Amount EUR]),
