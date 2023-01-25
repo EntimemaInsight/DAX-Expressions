@@ -1,3 +1,22 @@
+# CALCULATE(<expression>[, <filter1> [, <filter2> [, …]]])
+
+ProductLineAmount = CALCULATE(
+     SUM(factInternetSales[Sales Amount EUR]),
+     dimProduct[ProductLine] = "M"
+
+
+ProductLineAmount = CALCULATE(
+     SUM(factInternetSales[Sales Amount EUR]),
+     dimProduct[ProductLine] = "M"
+     
+     OR 
+     
+ProductLineAmount = CALCULATE(
+     SUMX(factInternetSales, factInternetSales[Sales Amount EUR]*factInternetSales[TotalProductCost]),
+     dimProduct[ProductLine] = "M"
+
+
+
 Total Sales Amount FILTER =                        
 CALCULATE(
     [Total Sales Amount],
@@ -8,6 +27,6 @@ VS
 
 Total Sales Amount KEEPFILTER = 
 CALCULATE(
-    [Total Sales Amount],
+    SUM(factInternetSales[Sales Amount EUR]),
     KEEPFILTER(dimProduct[Color] = "Blue") 
 
