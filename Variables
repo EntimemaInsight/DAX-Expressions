@@ -1,3 +1,5 @@
+Example 1
+
 % Sales YoY Growth = 
 # First we calculate the Sales Amount for the current/latest year
 var SalesAmountCurrentYear = ([Total Sales Amount] - CALCULATE([Total Sales Amount], PARALLELPERIOD('Calendar Table'[Date],-12,MONTH)))
@@ -8,3 +10,15 @@ var SalesAmountAllTimeMinusCurrentYear =  CALCULATE([Total Sales Amount], PARALL
 return 
 
 DIVIDE([Sales Amount Current Year], SalesAmountAllTimeMinusCurrentYear)
+
+Example 2 
+
+# We include ISBLANKE function
+
+Quadrant = 
+var QuadrantName = RELATED(Quadrants[QuadrantName])
+var BlankValue = ISBLANK(QuadrantName)
+var BlankValueCondition = IF(BlankValue, "No quadrant found", QuadrantName)
+
+return 
+BlankValueCondition
